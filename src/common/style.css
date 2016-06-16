@@ -1,0 +1,57 @@
+body{
+    background-color: #ebf0f1;
+}
+
+/*header样式*/
+.app-header {
+    background-color: #fff;
+    height: 50px;
+    position: fixed;
+    left:200px;
+    right: 0;
+    top: 0;
+    box-shadow: 0 2px 2px rgba(0,0,0,.05),0 1px 0 rgba(0,0,0,.05);
+}
+.app-header-user {
+    text-align: center;
+    width: 250px;
+    height: 100%;
+    line-height:50px;
+    float: right;
+}
+/*navbar样式*/
+.app-navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background-color: #1c2b36;
+    box-shadow: 0 2px 2px rgba(0,0,0,.05),0 1px 0 rgba(0,0,0,.05);
+}
+
+/*content样式*/
+.app-content {
+    margin-left: 200px;
+    margin-top: 50px;
+    background-color : rgba(255,0,0,.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+router-outlet{
+    margin-left: 200px;
+    margin-top: 50px;
+    background-color : rgba(255,0,0,.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
