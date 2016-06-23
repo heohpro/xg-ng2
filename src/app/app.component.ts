@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
-import { Demo1Component } from './Demo1/demo1.component'
-import { Header } from './app.header';
-import { Navbar} from './app.navbar';
-import { Content} from './app.content';
+import { Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
+import { Demo1Component } from './Modules/Demo1/demo1.component'
+import { Header } from './Public/app.header.ts';
+import { Navbar} from './Public/app.navbar.ts';
+
+import { HighlightDirective } from './Directive/highlight.directive';
+import { DefaultContentFilter } from './Filter/defaultContent.filter';
 
 
 @Component({
     selector: 'my-app',
-    directives: [ROUTER_DIRECTIVES, Header, Navbar],
+    providers: [],
+    directives: [ROUTER_DIRECTIVES, Header, Navbar, HighlightDirective],
+    pipes: [ DefaultContentFilter ],
     template: require('./app.component.html')
 })
 
 @Routes([
     {
         path: '/',
-        component: Demo1Component
+        component: Demo1Component,
     },
     {
         path: '/about',
@@ -23,4 +27,10 @@ import { Content} from './app.content';
     }
 ])
 
-export class AppComponent { }
+export class AppComponent {
+    constructor(
+        private _router:Router
+    ) {
+        //this._router.navigate(['/about']);
+    }
+}

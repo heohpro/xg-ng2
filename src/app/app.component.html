@@ -1,7 +1,17 @@
 <!--<link rel="stylesheet" href="style.css">-->
 <main>
-    app.component导航
-    <router-outlet></router-outlet>
     <header></header>
     <navbar></navbar>
+    <content>
+        <div>Directive
+            <p myHighlight>app.component导航</p>
+        </div>
+        <div>
+            Filter
+            <p>测试文本'TEST':{{'TEST'|defaultContent}}</p>
+            <p>测试文本'':{{''|defaultContent}}</p>
+            <p>测试文本'':{{''|defaultContent:'没有'}}</p>
+        </div>
+        <router-outlet></router-outlet>
+    </content>
 </main>
