@@ -1,0 +1,52 @@
+<!--<div class="app-header">-->
+    <!--<div class="app-header-user" *ngIf="name">-->
+        <!--{{name}}-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!-- navbar header -->
+<div class="navbar-header bg-black">
+    <!-- brand -->
+    <a href="/" class="navbar-brand text-lg">
+        <!--<i class="fa fa-leaf"></i>-->
+        <span class="hidden-folded">{{platform}}</span>
+    </a>
+    <!-- / brand -->
+</div>
+<!-- / navbar header -->
+
+<!-- navbar collapse -->
+<div class="collapse navbar-collapse box-shadow bg-white-only">
+    <!-- buttons -->
+    <!--<div class="nav navbar-nav m-l-sm hidden-xs">-->
+        <!--<a href="javascript:;" class="btn no-shadow navbar-btn" ng-click="app.settings.asideFolded = !app.settings.asideFolded" analytics-on="click" analytics-event="asideFolded" analytics-category="Commands">-->
+            <!--<i class="fa {{::app.settings.asideFolded ? 'fa-indent' : 'fa-dedent'}} fa-fw"></i>-->
+        <!--</a>-->
+    <!--</div>-->
+    <!-- / buttons -->
+
+    <!-- nabar right -->
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" ng-if="username">
+            <a href class="dropdown-toggle clear">
+                <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm m-r-sm">
+                    <!--<img src="/assets/img/default_head.png" alt="...">-->
+                    <i class="on md b-white bottom"></i>
+                </span>
+                <span class="hidden-sm hidden-md">Hi,  {{name}}</span>
+            </a>
+
+            <!--<ul class="dropdown-menu animated fadeInRight">-->
+                <!--<li>-->
+                    <!--<a ng-href="{{::logoutUrl}}" target="_self">登出</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!-- / dropdown -->
+        </li>
+
+    </ul>
+    <!-- / navbar right -->
+
+</div>
+<!-- / navbar collapse -->

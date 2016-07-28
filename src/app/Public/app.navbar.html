@@ -1,0 +1,43 @@
+<!--<div class="app-navbar">-->
+    <!--<a [routerLink]="['/']">-->
+        <!--<div class="app-navbar-title">-->
+            <!--Angular2管理平台-->
+        <!--</div>-->
+    <!--</a>-->
+    <!--<div class="app-navbar-content">-->
+        <!--<div *ngFor="let item of menu" >-->
+            <!--<a [routerLink]="item.url">-->
+                <!--<div class="app-navbar-item">-->
+                    <!--{{item.title}}-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="app-aside hidden-xs bg-black">
+    <div class="aside-wrap">
+    <div class="navi-wrap">
+        <nav class="navi">
+            <!-- first -->
+            <ul class="nav">
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                    <span>Navigation</span>
+                </li>
+
+                <li *ngFor="let item of menu">
+                    <a [routerLink]="item.url">
+                        <span class="pull-right text-muted">
+                            <i class="fa fa-fw fa-angle-right text"></i>
+                            <i class="fa fa-fw fa-angle-down text-active"></i>
+                        </span>
+                        <i ng-class="icons[$index]"></i>
+                        <span>{{item.title}}</span>
+                    </a>
+                </li>
+                <!-- / third -->
+            </ul>
+        </nav>
+    </div>
+</div>
+</div>
+

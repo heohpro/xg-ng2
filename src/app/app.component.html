@@ -1,17 +1,14 @@
 <!--<link rel="stylesheet" href="style.css">-->
-<main>
-    <header></header>
-    <navbar></navbar>
-    <content>
-        <div>Directive
-            <p myHighlight>app.component导航</p>
-        </div>
-        <div>
-            Filter TEST 大方
-            <p>测试文本'TEST':{{'TEST'|defaultContent}}</p>
-            <p>测试文本'':{{''|defaultContent}}</p>
-            <p>测试文本'':{{''|defaultContent:'没有'}}</p>
-        </div>
-        <router-outlet></router-outlet>
-    </content>
-</main>
+<div class="app app-header-fixed">
+    <div class="app-header navbar">
+        <header></header>
+    </div>
+    <!--<div class="app-aside hidden-xs bg-black">-->
+        <navbar></navbar>
+    <!--</div>-->
+    <div class="app-content">
+        <content>
+            <router-outlet></router-outlet>
+        </content>
+    </div>
+</div>

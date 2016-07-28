@@ -1,7 +1,12 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CombileCssWebpackPlugin = require('combine-css-webpack-plugin');
 var helpers = require('./helpers');
+var path = require('path');
+var fs = require('fs');
+var distPath = __dirname + '/../dist/'
+
 
 module.exports = {
     entry: {
@@ -59,6 +64,12 @@ module.exports = {
             template: 'src/index.html'
         }),
 
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("[name].css"),
+
+        new CombileCssWebpackPlugin({
+            source: __dirname + '/../src/common/css/style.css',
+            target: path.join(distPath, 'app.css'),
+            useMinify: false
+        })
     ]
 };

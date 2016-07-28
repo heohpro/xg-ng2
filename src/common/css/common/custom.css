@@ -1,0 +1,53 @@
+/* 自定义的公用的样式 */
+
+/* 表格横向滚动 */
+@media screen and (max-width: 1200px) {
+    .table-scroll {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        border-top: 0;
+    }
+
+    .table-scroll > .table {
+        margin-bottom: 0;
+        min-width: 1100px;
+    }
+}
+
+/* 重写notify相关样式 */
+.uix-notify-container.uix-notify-fixed.top-right {
+    top: 60px;
+}
+
+.uix-notify-container.uix-notify-fixed {
+    max-width: 250px;
+}
+/* 页面标题 */
+.page-title {
+    font-size: 24px;
+    font-weight: 300;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px 0 0;
+}
+
+.page-title > a {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+    .page-title {
+        font-size: 20px;
+    }
+}
+
+/* --------------- headerAPP图标 -------------- */
+.navbar-brand {
+    padding-left: 8px;
+    padding-right: 0;
+}
