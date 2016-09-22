@@ -4,8 +4,10 @@ import { enableProdMode } from '@angular/core';
 import ROUTER_PROVIDER from './app/Router/app.routes.ts';
 import { HTTP_PROVIDERS} from '@angular/http';
 import { AppComponent } from './app/app.component';
-require('./common/style.css');
+//require('./common/css/style.css');
+//require('./common/css/base/simple-line-icons.css');
 
+import './common/css/style.js';
 
 
 if (process.env.ENV === 'production') {

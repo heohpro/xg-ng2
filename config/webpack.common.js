@@ -35,19 +35,13 @@ module.exports = {
                 loader: 'html'
             },
             {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                test: /\.(png|jpe?g|gif|ico)$/,
                 loader: 'file?name=assets/[name].[hash].[ext]'
             },
-            //{
-            //    test: /\.css$/,
-            //    exclude: helpers.root('src', 'app'),
-            //    loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-            //},
-            //{
-            //    test: /\.css$/,
-            //    include: helpers.root('src', 'app'),
-            //    loader: 'raw'
-            //}
+            {
+                test: /\.(svg|woff|woff2|ttf|eot)$/,
+                loader: 'file?name=fonts/[name].[hash].[ext]'
+            },
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
@@ -60,16 +54,19 @@ module.exports = {
             name: ['app', 'vendor', 'polyfills']
         }),
 
+
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
 
         new ExtractTextPlugin("[name].css"),
 
-        new CombileCssWebpackPlugin({
-            source: __dirname + '/../src/common/css/style.css',
-            target: path.join(distPath, 'app.css'),
-            useMinify: false
-        })
+
+
+        //new CombileCssWebpackPlugin({
+        //    source: __dirname + '/../src/common/css/style.css',
+        //    target: path.join(distPath, 'app.css'),
+        //    useMinify: false
+        //})
     ]
 };

@@ -1,0 +1,22 @@
+var path = require('path');
+var webpackConfig = require('./config/webpack.common.js');
+
+module.exports = function(config) {
+    config.set({
+        files: [
+            { pattern: './karma-shim.js' , watched: false }
+        ] ,
+        preprocessors: {
+            './karma-shim.js': ['webpack']
+        } ,
+        webpack: webpackConfig ,
+        plugins : [
+            'karma-jasmine' ,
+          'karma-chrome-launcher' ,
+          require("karma-webpack")
+        ] ,
+        proxies: {
+            "/app/": "http://localhost:3000/app/"
+        }
+        })
+}
